@@ -1,4 +1,4 @@
-# 💧 Leakage AI Detector
+# 💧Water Leakage AI Detector
 
 > AI-powered water leakage anomaly detection and automated reporting system for water utilities.
 
