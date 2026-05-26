@@ -1,0 +1,231 @@
+
+=================================================================
+WATER NETWORK LEAKAGE DETECTION REPORT
+Generated: 26 May 2026
+System: AI-Powered Leakage Detector v1.0
+=================================================================
+
+EXECUTIVE SUMMARY
+─────────────────
+Total anomalies detected: 17
+Critical events: 2
+High severity: 2
+Medium severity: 13
+
+=================================================================
+DETAILED ZONE REPORTS
+=================================================================
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_01 — Northfield | Score: 100.0/100
+─────────────────────────────────────────────────────────────────
+**CONFIRMED LEAKAGE ALERT: DMA_01 - Northfield Zone**
+
+The sensor readings and statistical analysis for DMA_01 (Northfield) indicate a significant anomaly in the Minimum Night Flow (MNF) rate, with a recorded value of 6.217 L/s, substantially higher than the rolling average of 2.983 L/s. The high MNF Z-Score of 8.56, combined with a Confidence Score of 100.0, confirms a critical leakage event. The Acoustic Logger Alert further supports this finding.
+
+This leakage event is likely a medium to large-sized burst or a significant service pipe leak, given the severity and risk level indicated by the data. The network pressure of 44.66 metres is within normal ranges, suggesting that the leak is not affecting overall system pressure.
+
+The field team is recommended to investigate and locate the source of the leak immediately, prioritizing a thorough inspection of the Northfield zone to identify and repair the leak as soon as possible.
+
+**Priority Level: High**
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_05 — Greenpark | Score: 100.0/100
+─────────────────────────────────────────────────────────────────
+**CONFIRMED LEAKAGE ALERT: DMA_05 (Greenpark) Zone**
+
+The sensor readings and statistical analysis for the Greenpark zone indicate a significant anomaly in the minimum night flow (MNF) rate, with a Z-Score of 9.02, exceeding the threshold for anomalous activity. In plain terms, the data suggests that there is a substantial amount of water escaping from the network, resulting in an unusually high MNF rate of 10.912 L/s, compared to the rolling average of 5.935 L/s.
+
+This leakage event is likely a large, catastrophic burst, given the critical severity and confirmed risk level. The acoustic logger alert supports this theory, indicating a potential major pipe failure.
+
+The field team is recommended to take immediate action to investigate and locate the source of the leakage. Priority should be given to inspecting the network, particularly in areas with high-pressure zones, to identify and repair the damaged section.
+
+**Priority Level: HIGH**. Urgent attention is required to minimize water loss, prevent further damage, and maintain network integrity. The field team should mobilize promptly to respond to this confirmed leakage event.
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_07 — Lakeside | Score: 69.9/100
+─────────────────────────────────────────────────────────────────
+**HIGH RISK LEAKAGE ALERT: DMA_07 - LAKESIDE**
+
+Our analysis of the latest sensor readings for DMA_07 (Lakeside) indicates a significant anomaly in the Minimum Night Flow (MNF) rate, with a Z-Score of 3.99, exceeding the threshold of 2.5. In simple terms, this means that the water flow in the network during the night is higher than expected, suggesting a potential leak. The pressure reading is within normal bounds, which suggests that the leak is likely to be a background or non-visible loss, such as a burst pipe or a leak from a service connection.
+
+Given the high Severity and Risk Level scores, we believe this is a medium to large-scale leakage event. We recommend that the field team investigates this incident immediately, starting with a thorough examination of the network's service connections and pipe joints. 
+
+**Priority Level: HIGH**. The field team should treat this as a high-priority task to mitigate potential water loss and minimize the risk of further damage to the network.
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_03 — Castleview | Score: 60.9/100
+─────────────────────────────────────────────────────────────────
+**URGENT LEAKAGE ALERT: DMA_03 Castleview**
+
+Analysis of recent sensor readings and statistical data indicates a significant anomaly in the Castleview zone. The Minimum Night Flow (MNF) of 9.579 L/s exceeds the expected threshold, with a Z-Score of 3.74, suggesting a potential large-scale leakage event. The network pressure reading of 54.46 metres is within normal ranges, but the Elevated Risk level and High Severity rating warrant immediate attention.
+
+This leakage event is likely a medium to large-sized burst or background leakage, potentially on a trunk main or major distribution pipe. The Confidence Score of 60.9/100 and absent Acoustic Logger Alert suggest a possible slow-onset or diffuse leakage.
+
+**RECOMMENDED ACTION:** The field team should promptly investigate the Castleview zone, focusing on large-diameter pipes and trunk mains. Initial steps should include visual inspections, soundings, and step-testing to pinpoint the leakage source.
+
+**PRIORITY LEVEL:** High. Due to the Elevated Risk level and potential significant water loss, this leakage event requires immediate attention to minimize waste, protect infrastructure, and maintain customer service.
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_07 — Lakeside | Score: 59.8/100
+─────────────────────────────────────────────────────────────────
+**HIGH RISK LEAKAGE ALERT: DMA_07 (Lakeside)**
+
+Analysis of the latest sensor readings and statistical data for Zone DMA_07 (Lakeside) indicates a potential leakage event. The Minimum Night Flow (MNF) of 4.784 L/s is significantly higher than the rolling average, with a Z-Score of 2.98, suggesting an anomalous increase in night-time flow. The network pressure is within normal ranges, but the Confidence Score of 59.8/100 and Severity rating of Medium indicate a possible medium-sized leak.
+
+This event is likely a medium-sized background leakage, potentially from a burst pipe or faulty asset. The HIGH RISK level is due to the potential impact on the network and customer supply.
+
+Recommended immediate action for the field team is to conduct a thorough leakage investigation, including on-site inspections and acoustic logging to pinpoint the source of the leak. 
+
+Priority level: **HIGH**. The field team should prioritize this task to minimize potential disruption to customer supply and mitigate further network damage.
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_02 — Riverside | Score: 57.9/100
+─────────────────────────────────────────────────────────────────
+**LEAKAGE ALERT: Potential Medium-Severity Leak in DMA_02 - Riverside Zone**
+
+Analysis of the latest sensor readings and statistical data indicates a potential leak in the Riverside zone (DMA_02). The Minimum Night Flow (MNF) of 4.977 L/s is higher than the rolling average, and the Acoustic Logger Alert has been triggered. The MNF Z-Score of 1.7, although not anomalous, combined with the medium severity and confidence score of 57.9/100, suggests a possible leak.
+
+This leakage event is likely a medium-severity, background leak, which may not be immediately visible but is still causing significant water loss. The network pressure reading of 48.39 metres is within normal ranges, which suggests that the leak is not causing a significant pressure drop.
+
+**Recommended Action:** The field team should conduct a thorough investigation, including a visual inspection and leak detection survey, to confirm the presence and location of the leak. 
+**Priority Level:** Medium.
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_09 — Eastbrook | Score: 56.5/100
+─────────────────────────────────────────────────────────────────
+**LEAKAGE ALERT: Potential Medium Severity Leak in DMA_09 (Eastbrook)**
+
+The latest sensor readings for Zone DMA_09 (Eastbrook) indicate a potential leakage event. The Minimum Night Flow (MNF) is 7.449 L/s, which is slightly above the expected rolling average of 7.419 L/s, but still within normal bounds (MNF Z-Score: 0.65). However, the Acoustic Logger has triggered an alert, suggesting the presence of a possible leak. The pressure reading is within expected levels (Network Pressure: 48.6 metres), but the low Pressure Z-Score (-3.64) may indicate some pressure instability.
+
+This event is likely a medium-severity background leak, given the moderate Confidence Score (56.5/100) and Medium Severity classification. The field team is recommended to conduct a thorough investigation, including a site visit and leakage survey, to confirm the presence and location of the leak.
+
+**Priority Level: Medium**
+Immediate action is required to verify the leak and minimize potential losses. The field team should prioritize this task and provide an update on their findings as soon as possible.
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_03 — Castleview | Score: 56.0/100
+─────────────────────────────────────────────────────────────────
+**ELEVATED RISK: Potential Medium-Scale Leakage Detected in DMA_03 (Castleview)**
+
+Analysis of the latest sensor readings and statistical data for DMA_03 (Castleview) reveals a Minimum Night Flow (MNF) of 9.442 L/s, which is significantly higher than the expected rolling average of 9.117 L/s. The MNF Z-Score of 3.51 indicates an anomalous reading, suggesting a potential leakage event. The network pressure and acoustic logger data do not indicate any other unusual activity.
+
+This data likely indicates a medium-scale background leakage, potentially from a damaged or faulty pipe joint, rather than a sudden, large-scale burst. The Confidence Score of 56.0/100 and ELEVATED RISK level warrant immediate attention to mitigate potential water loss and infrastructure damage.
+
+The field team is recommended to conduct a thorough investigation, including site visits and leakage surveys, to pinpoint the source of the leakage. **Priority Level: Medium**. Immediate action is required to minimize losses and prevent further damage. The field team should report back with findings and recommendations for repairs or further action.
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_09 — Eastbrook | Score: 54.5/100
+─────────────────────────────────────────────────────────────────
+**LEAKAGE ALERT: DMA_09 Eastbrook Zone**
+
+The sensor readings for DMA_09 Eastbrook zone indicate a potential leakage event. The Minimum Night Flow (MNF) of 7.415 L/s is slightly elevated, with a Z-Score of 0.45, suggesting a possible anomaly. The Acoustic Logger Alert also supports this finding. The network pressure is within normal ranges, but the Confidence Score of 54.5/100 indicates a moderate level of uncertainty.
+
+This data likely indicates a small to medium-sized background leakage event, rather than a major burst. The Severity Level is classified as Medium, and the Risk Level is NORMAL.
+
+The field team is recommended to conduct a thorough investigation, including a site visit and possible deployment of leak detection equipment, to confirm the presence and location of the leak.
+
+**Priority Level: MEDIUM**
+Immediate action is advised to minimize potential water loss and network disruption. The field team should prioritize this investigation and report back with findings and recommendations for repair or further action.
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_09 — Eastbrook | Score: 50.8/100
+─────────────────────────────────────────────────────────────────
+**LEAKAGE ALERT: Potential Low-Volume Leak in Eastbrook (DMA_09)**
+
+The latest sensor readings from Zone Eastbrook (DMA_09) indicate a potential low-volume leak. The Minimum Night Flow (MNF) of 7.354 L/s is near the expected average, with a Z-Score of 0.08, suggesting no significant anomaly. However, the Acoustic Logger Alert and medium severity rating warrant investigation. The low network pressure, with a Z-Score of -5.16, may be contributing to the suspected leak.
+
+This event likely represents a small, non-catastrophic leak, given the relatively stable MNF and moderate confidence score of 50.8. The 'Pressure Alert' risk level indicates that the low pressure may be exacerbating the leak or masking its severity.
+
+The field team is recommended to conduct a thorough investigation, including on-site inspections and verification of the acoustic logger data, to confirm the existence and location of the leak. **Priority Level: Medium**. Immediate action is required to mitigate potential further damage and water loss. The team should proceed with caution, considering the low-pressure conditions, and report back with findings and recommendations for repair or further investigation.
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_07 — Lakeside | Score: 47.5/100
+─────────────────────────────────────────────────────────────────
+**HIGH RISK LEAKAGE ALERT: DMA_07 (Lakeside)**
+
+The latest data analysis for DMA_07 (Lakeside) zone indicates a potential leakage event. The Minimum Night Flow (MNF) of 5.303 L/s is significantly higher than the rolling average, with a Z-Score of 3.9, suggesting an anomalous flow pattern. This, combined with a medium severity rating and high risk level, warrants immediate attention.
+
+The data suggests a likely background leakage event, where water is escaping from the network at a consistent rate, potentially due to a burst or cracked pipe. The absence of an acoustic logger alert indicates that the leak may not be highly audible or visible, requiring proactive investigation.
+
+We recommend that the field team conducts a thorough leak detection survey, including soundings and step-testing, to pinpoint the source of the leak. **Priority Level: HIGH**. Immediate action is necessary to minimize water loss and potential network damage. The field team should investigate the zone as soon as possible to identify and repair the leak, ensuring the network's integrity and reducing the risk of further issues.
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_07 — Lakeside | Score: 46.8/100
+─────────────────────────────────────────────────────────────────
+**ELEVATED LEAKAGE RISK DETECTED IN DMA_07 (LAKESIDE)**
+
+Analysis of the latest sensor readings and statistical data for DMA_07 (Lakeside) indicates a potential leakage event. The Minimum Night Flow (MNF) of 4.64 L/s is above the expected range, with a Z-Score of 2.73, suggesting an anomalous reading. The Confidence Score of 46.8/100 and Medium Severity rating indicate a likely genuine leakage event. The data suggests a medium-sized, non- catastrophic leakage event, such as a burst pipe or service connection leak.
+
+The field team is recommended to conduct a thorough investigation, including site visits and leak detection surveys, to locate and confirm the source of the leakage. Immediate action is necessary to mitigate potential water loss and minimize the risk of further damage.
+
+**Priority Level: HIGH**
+The field team should prioritize this task and allocate necessary resources to investigate and rectify the issue promptly.
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_04 — Moorside | Score: 44.7/100
+─────────────────────────────────────────────────────────────────
+**LEAKAGE ALERT: Potential Loss in Moorside Zone**
+
+The data analysis for DMA_04 (Moorside) indicates an anomalous Minimum Night Flow (MNF) reading of 3.596 L/s, with a Z-Score of 2.77, suggesting a potential leakage event. In simple terms, the water flow in this zone is higher than expected during the night, when demand is typically low. The network pressure and acoustic logger readings do not indicate any other issues.
+
+This is likely a background leakage event, where a small but continuous leak is occurring, rather than a sudden, large burst. The medium severity and normal risk level suggest that the leak is not catastrophic, but still requires attention to prevent further loss.
+
+**RECOMMENDED ACTION:** The field team should investigate the Moorside zone to pinpoint the location of the suspected leak. We recommend inspecting the network and conducting a step-test to confirm the leak's location.
+
+**PRIORITY LEVEL:** Medium. We advise the field team to schedule an investigation at their earliest convenience to minimize water loss and potential damage to the network.
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_07 — Lakeside | Score: 43.4/100
+─────────────────────────────────────────────────────────────────
+**HIGH RISK LEAKAGE ALERT: DMA_07 LAKESIDE ZONE**
+
+Analysis of the leakage detection data for DMA_07 Lakeside zone indicates an anomalous Minimum Night Flow (MNF) reading of 4.941 L/s, with a Z-Score of 3.26, exceeding the threshold of 2.5. This suggests a potential leakage event. The network pressure reading of 49.53 metres is within normal ranges, and there are no acoustic logger alerts. The rolling average MNF is 4.37 L/s, and the confidence score is 43.4/100, indicating a medium severity event.
+
+This data likely indicates a medium-sized, non- catastrophic leakage event, such as a service pipe or mains leak. Given the high risk level, immediate action is recommended. The field team should prioritize investigation and potential repair of the suspected leak, focusing on the service pipes and mains within the DMA_07 zone.
+
+**PRIORITY LEVEL: HIGH**
+Recommended immediate action: Dispatch field team to investigate and repair potential leak in DMA_07 Lakeside zone.
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_03 — Castleview | Score: 43.3/100
+─────────────────────────────────────────────────────────────────
+**ELEVATED LEAKAGE RISK ALERT: DMA_03 Castleview Zone**
+
+Analysis of the latest sensor readings and statistical data indicates an elevated risk of leakage in the Castleview zone (DMA_03). The Minimum Night Flow (MNF) of 9.21 L/s is higher than the rolling average, with a Z-Score of 3.11, suggesting an anomalous reading. This, combined with a medium severity rating and a confidence score of 43.3, indicates a potential leakage event.
+
+The data suggests a likely background leakage, where water is escaping from the distribution network at a steady rate. The absence of an Acoustic Logger Alert indicates that the leak may not be highly audible or visible.
+
+The field team is recommended to undertake a thorough investigation, including site visits and leakage surveys, to identify and quantify the leak. Immediate action is required to minimize water loss and potential damage to the network.
+
+Priority level: HIGH. The field team should respond promptly to this alert to mitigate the risk of further water loss and potential network damage.
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_06 — Hillcrest | Score: 43.0/100
+─────────────────────────────────────────────────────────────────
+**LEAKAGE ALERT: Potential Background Leakage in DMA_06 (Hillcrest)**
+
+The data collected on 2025-02-08 indicates a higher than expected Minimum Night Flow (MNF) of 6.998 L/s, with a Z-Score of 2.3, suggesting a potential background leakage in the Hillcrest zone. The Acoustic Logger Alert supports this finding. The Pressure Z-Score of 1.06 is within normal ranges, and the Rolling Average MNF is 6.681 L/s. The Confidence Score of 43.0/100 and Severity rating of Medium indicate a possible, but not confirmed, leakage event.
+
+This likely represents a background leakage, potentially from a number of small, undetected leaks rather than a single large burst. The Risk Level is classified as NORMAL, but investigation is still warranted to mitigate potential losses.
+
+The field team is recommended to conduct a thorough investigation, including on-site inspections and possible step-testing, to confirm the presence and location of any leaks. **Priority Level: Medium**. Prompt action will help minimize water loss and prevent potential network damage.
+
+─────────────────────────────────────────────────────────────────
+ZONE: DMA_08 — Westgate | Score: 40.4/100
+─────────────────────────────────────────────────────────────────
+**Leakage Alert: Potential Background Leakage in DMA_08 (Westgate)**
+
+According to the recent data, the Minimum Night Flow (MNF) in DMA_08 (Westgate) is 5.294 L/s, which is slightly above the expected normal flow. The MNF Z-Score of 1.89 indicates a higher-than-expected flow, but not anomalous enough to trigger a high-priority alert. The network pressure and acoustic logger readings do not indicate any significant issues.
+
+This data suggests a potential background leakage event, which is a small, ongoing leak that does not significantly impact the network pressure. The Confidence Score of 40.4 and Severity of Medium support this assessment.
+
+The field team is recommended to inspect the zone, focusing on areas with historical leakage issues or poor asset condition. A targeted leakage survey should be conducted to pinpoint the source of the potential leak.
+
+**Priority Level: Medium**. The field team should schedule the inspection and survey at the earliest convenience, but it is not required to be completed urgently.
+
+=================================================================
+END OF REPORT
+Generated by Leakage AI Detector
+Author: Siddharth Shekhar Singh
+=================================================================

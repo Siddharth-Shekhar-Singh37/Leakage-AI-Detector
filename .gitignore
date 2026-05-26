@@ -216,3 +216,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Environment variables - NEVER commit this
+.env
+.env.local
+.env.production
+
+# Database files
+data/db/leakage.db
+
+# dbt target folder
+dbt_project/target/
+dbt_project/logs/
