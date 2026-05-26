@@ -1,0 +1,17 @@
+name: leakage_ai_detector
+version: '1.0.0'
+config-version: 2
+
+profile: leakage_profile
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target"]
+
+models:
+  leakage_ai_detector:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+      
