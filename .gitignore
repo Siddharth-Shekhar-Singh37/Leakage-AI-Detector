@@ -223,7 +223,7 @@ __marimo__/
 .env.production
 
 # Database files
-data/db/leakage.db
+# data/db/leakage.db
 
 # dbt target folder
 dbt_project/target/
