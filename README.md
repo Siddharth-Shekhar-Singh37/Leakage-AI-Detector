@@ -83,6 +83,9 @@ streamlit run dashboard/app.py
 ```
 
 ## 📁 Project Structure
+## 📁 Project Structure
+
+```
 leakage-ai-detector/
 ├── data/
 │   ├── synthetic/          # Data generator
@@ -96,6 +99,7 @@ leakage-ai-detector/
 ├── dashboard/              # Streamlit dashboard
 ├── docs/                   # Generated reports
 └── requirements.txt
+```
 
 ## 👤 Author
 **Siddharth Shekhar Singh**
