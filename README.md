@@ -43,9 +43,10 @@ Interactive Streamlit Dashboard ✅
 |---|---|
 | **Data Engineering** | Python, Pandas, SQLite, dbt |
 | **Detection** | Z-score, Rolling Average, Confidence Scoring |
-| **AI Layer** | Groq API, Llama 3.3 70B |
+| **AI Layer** | LangChain, ChatGroq, Llama 3.3 70B, Prompt Engineering |
 | **Dashboard** | Streamlit, Plotly |
-| **Automation** | GitHub Actions |
+| **Automation** | n8n, Gmail API |
+| **Version Control** | Git, GitHub |
 
 ## 📊 Results
 
