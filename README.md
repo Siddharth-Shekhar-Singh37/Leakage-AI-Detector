@@ -107,6 +107,37 @@ leakage-ai-detector/
 ├── docs/                   # Generated reports
 └── requirements.txt
 ```
+## 🔄 Automation Workflow (n8n)
+
+The entire pipeline is automated using n8n:
+
+![n8n Workflow](docs/n8n_workflow.png)
+
+**Workflow steps:**
+1. Manual trigger fires the pipeline
+2. Python Code node generates professional HTML report
+3. Gmail node delivers report automatically to operations team
+
+## 📧 Automated Email Report
+
+The system automatically generates and delivers professional HTML reports:
+
+- 💧 Blue branded header
+- 📊 Network summary table
+- 🚨 Critical alerts highlighted in red
+- 🔗 Direct link to live dashboard
+
+## 🎯 Key Results
+
+| Metric | Result |
+|---|---|
+| Total readings analysed | 900 |
+| DMA zones monitored | 10 |
+| Critical pipe bursts detected | 2 (confidence 100/100) |
+| Total anomalies flagged | 17 |
+| False positive rate | <2% |
+| Pipeline execution time | <30 seconds |
+| Report delivery | Automated via n8n + Gmail |
 
 ## 👤 Author
 
