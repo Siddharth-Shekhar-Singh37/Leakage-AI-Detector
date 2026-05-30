@@ -1,15 +1,25 @@
 """
-AI Report Generator
-Uses Groq (Llama 3.3 70B) to generate plain-English leakage
-reports from anomaly detection results.
+AI Report Generator — LangChain Version
+Uses LangChain + Groq (Llama 3.3 70B) to generate plain-English
+leakage reports from anomaly detection results.
+
+LangChain Components Used:
+- ChatPromptTemplate: Separates prompt logic from business logic
+- ChatGroq: LangChain wrapper around Groq API
+- StrOutputParser: Parses LLM output into clean string
+- Chain (|): Connects components into a pipeline
 """
 
 import os
 import sqlite3
 import pandas as pd
 from dotenv import load_dotenv
-from groq import Groq
 from datetime import datetime
+
+# ── LangChain Imports ─────────────────────────────────────────────
+from langchain_groq import ChatGroq
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 
 # ── Setup ─────────────────────────────────────────────────────────
 load_dotenv()
@@ -17,7 +27,56 @@ load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH  = os.path.join(BASE_DIR, "data", "db", "leakage.db")
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+# ── LangChain Components ──────────────────────────────────────────
+
+# 1. Language Model — Groq via LangChain wrapper
+llm = ChatGroq(
+    model="llama-3.3-70b-versatile",
+    api_key=os.getenv("GROQ_API_KEY"),
+    temperature=0.3,
+    max_tokens=400
+)
+
+# 2. Prompt Template — separates prompt from code
+prompt_template = ChatPromptTemplate.from_template("""
+You are a senior water network analyst at a UK water utility company.
+Analyse the following leakage detection data and write a professional
+operational report for the field team.
+
+ZONE INFORMATION:
+- Zone ID: {zone_id}
+- Zone Name: {zone_name}
+- Zone Size: {zone_size}
+- Date: {reading_date}
+
+SENSOR READINGS:
+- Minimum Night Flow (MNF): {mnf_ls} L/s
+- Network Pressure: {pressure_m} metres
+- Acoustic Logger Alert: {acoustic_alert}
+
+STATISTICAL ANALYSIS:
+- MNF Z-Score: {mnf_zscore} (above 2.5 = anomalous)
+- Pressure Z-Score: {pressure_zscore}
+- Rolling Average MNF: {mnf_rolling_avg} L/s
+- Confidence Score: {confidence_score}/100
+- Severity: {severity}
+- Risk Level: {risk_level}
+
+Write a concise professional report (150-200 words) that includes:
+1. A clear alert headline
+2. What the data shows in plain English
+3. What type of leakage event this likely is
+4. Recommended immediate action for the field team
+5. Priority level
+
+Use professional water industry language but keep it clear and actionable.
+""")
+
+# 3. Output Parser — extracts clean text from LLM response
+output_parser = StrOutputParser()
+
+# 4. Chain — connects prompt | llm | parser into one pipeline
+report_chain = prompt_template | llm | output_parser
 
 
 def load_anomalies() -> pd.DataFrame:
@@ -38,53 +97,33 @@ def load_anomalies() -> pd.DataFrame:
 
 
 def generate_zone_report(zone_data: pd.Series) -> str:
-    """Generate a plain-English report for a single anomaly."""
-
-    prompt = f"""
-You are a senior water network analyst at a UK water utility company.
-Analyse the following leakage detection data and write a professional
-operational report for the field team.
-
-ZONE INFORMATION:
-- Zone ID: {zone_data['zone_id']}
-- Zone Name: {zone_data['zone_name']}
-- Zone Size: {zone_data['zone_size']}
-- Date: {str(zone_data['reading_date'])[:10]}
-
-SENSOR READINGS:
-- Minimum Night Flow (MNF): {zone_data['mnf_ls']} L/s
-- Network Pressure: {zone_data['pressure_m']} metres
-- Acoustic Logger Alert: {'YES' if zone_data['acoustic_alert'] == 1 else 'NO'}
-
-STATISTICAL ANALYSIS:
-- MNF Z-Score: {round(zone_data['mnf_zscore'], 2)} (above 2.5 = anomalous)
-- Pressure Z-Score: {round(zone_data['pressure_zscore'], 2)}
-- Rolling Average MNF: {zone_data['mnf_rolling_avg']} L/s
-- Confidence Score: {zone_data['confidence_score']}/100
-- Severity: {zone_data['severity']}
-- Risk Level: {zone_data['risk_level']}
-
-Write a concise professional report (150-200 words) that includes:
-1. A clear alert headline
-2. What the data shows in plain English
-3. What type of leakage event this likely is
-4. Recommended immediate action for the field team
-5. Priority level
-
-Use professional water industry language but keep it clear and actionable.
-"""
-
-    response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
-        messages=[{"role": "user", "content": prompt}],
-        max_tokens=400
-    )
-    return response.choices[0].message.content
+    """
+    Generate a plain-English report for a single anomaly
+    using LangChain chain: prompt_template | llm | output_parser
+    """
+    # Invoke the LangChain chain with zone data
+    report = report_chain.invoke({
+        "zone_id":          zone_data["zone_id"],
+        "zone_name":        zone_data["zone_name"],
+        "zone_size":        zone_data["zone_size"],
+        "reading_date":     str(zone_data["reading_date"])[:10],
+        "mnf_ls":           zone_data["mnf_ls"],
+        "pressure_m":       zone_data["pressure_m"],
+        "acoustic_alert":   "YES" if zone_data["acoustic_alert"] == 1 else "NO",
+        "mnf_zscore":       round(zone_data["mnf_zscore"], 2),
+        "pressure_zscore":  round(zone_data["pressure_zscore"], 2),
+        "mnf_rolling_avg":  zone_data["mnf_rolling_avg"],
+        "confidence_score": zone_data["confidence_score"],
+        "severity":         zone_data["severity"],
+        "risk_level":       zone_data["risk_level"],
+    })
+    return report
 
 
 def generate_full_report(df: pd.DataFrame) -> str:
     """Generate a complete report for all anomalies."""
-    print("\n🤖 Generating AI reports for each anomaly...\n")
+    print("\n🤖 Generating AI reports using LangChain + Groq...\n")
+    print("   Chain: ChatPromptTemplate | ChatGroq | StrOutputParser\n")
 
     report_date = datetime.now().strftime("%d %B %Y")
     full_report = f"""
@@ -92,6 +131,7 @@ def generate_full_report(df: pd.DataFrame) -> str:
 WATER NETWORK LEAKAGE DETECTION REPORT
 Generated: {report_date}
 System: AI-Powered Leakage Detector v1.0
+AI Engine: LangChain + Groq Llama 3.3 70B
 {'='*65}
 
 EXECUTIVE SUMMARY
@@ -121,6 +161,7 @@ ZONE: {row['zone_id']} — {row['zone_name']} | Score: {row['confidence_score']}
 {'='*65}
 END OF REPORT
 Generated by Leakage AI Detector
+AI Engine: LangChain + Groq Llama 3.3 70B
 Author: Siddharth Shekhar Singh
 {'='*65}
 """
@@ -140,18 +181,21 @@ def save_report(report: str) -> str:
 
 
 def main():
-    print("🌊 AI Leakage Report Generator\n")
+    print("🌊 AI Leakage Report Generator — LangChain Edition\n")
     print("="*65)
+    print("🔗 LangChain Chain Architecture:")
+    print("   ChatPromptTemplate → ChatGroq → StrOutputParser")
+    print("="*65 + "\n")
 
     df       = load_anomalies()
     report   = generate_full_report(df)
     filepath = save_report(report)
 
     print("\n" + "="*65)
-    print("📄 REPORT PREVIEW (first 2000 chars):")
+    print("📄 REPORT PREVIEW (first 1500 chars):")
     print("="*65)
-    print(report[:2000])
-    print("\n🎉 Report generation complete!")
+    print(report[:1500])
+    print("\n🎉 LangChain report generation complete!")
     print(f"   Full report saved to: {filepath}")
 
 
