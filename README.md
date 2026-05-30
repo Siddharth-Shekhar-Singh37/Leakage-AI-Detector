@@ -118,14 +118,13 @@ The entire pipeline is automated using n8n:
 2. Python Code node generates professional HTML report
 3. Gmail node delivers report automatically to operations team
 
+
 ## 📧 Automated Email Report
 
 The system automatically generates and delivers professional HTML reports:
 
-- 💧 Blue branded header
-- 📊 Network summary table
-- 🚨 Critical alerts highlighted in red
-- 🔗 Direct link to live dashboard
+![Email Report](docs/email_report.png)
+
 
 ## 🎯 Key Results
 
