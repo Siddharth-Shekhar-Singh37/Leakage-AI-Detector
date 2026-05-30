@@ -8,10 +8,13 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-Live%20Demo-red)
 
 ## 🌐 Live Demo
+
 👉 **[Open Live Dashboard](https://leakage-ai-detector-bwxcdnvetwwjjpsdnwfz2r.streamlit.app/)**
 
 ## 📌 Overview
+
 An end-to-end intelligent system that:
+
 - 🔍 Detects water leakage anomalies from MNF, pressure and acoustic data
 - 📊 Analyses 10 DMA zones across 90 days of sensor readings
 - 🤖 Uses Groq AI (Llama 3.3 70B) to generate plain-English field reports
@@ -19,19 +22,23 @@ An end-to-end intelligent system that:
 - ⚡ Runs the complete pipeline in under 30 seconds
 
 ## 🏗️ Architecture
+
+```
 Raw Sensor Data (CSV)
-↓
+      ↓
 SQLite Database
-↓
+      ↓
 dbt Transformation (staging + mart models)
-↓
+      ↓
 Anomaly Detection (Z-score + Rolling Average)
-↓
+      ↓
 AI Report Generation (Groq Llama 3.3 70B)
-↓
+      ↓
 Interactive Streamlit Dashboard ✅
+```
 
 ## 🛠️ Tech Stack
+
 | Layer | Tools |
 |---|---|
 | **Data Engineering** | Python, Pandas, SQLite, dbt |
@@ -41,6 +48,7 @@ Interactive Streamlit Dashboard ✅
 | **Automation** | GitHub Actions |
 
 ## 📊 Results
+
 - ✅ 900 readings analysed across 10 DMA zones
 - ✅ 2 critical pipe burst events detected — confidence score 100/100
 - ✅ 17 anomalies flagged with severity classification
@@ -101,10 +109,13 @@ leakage-ai-detector/
 ```
 
 ## 👤 Author
+
 **Siddharth Shekhar Singh**
+
 - 🔗 [LinkedIn](https://linkedin.com/in/siddharth-shekhar-singh)
-- 🐙 [GitHub](https://github.com/Siddharth-Shekhar-Singh37)
+- 🐙 [GitHub](https://github.com/Siddharth-Shekhar-Singh37/Leakage-AI-Detector)
 - 🌐 [Live Demo](https://leakage-ai-detector-bwxcdnvetwwjjpsdnwfz2r.streamlit.app/)
 
 ---
+
 *Built to demonstrate AI + data automation skills for water utility applications*
